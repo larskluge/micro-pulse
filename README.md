@@ -8,6 +8,10 @@ bond, so no unpairing is needed.
 Built because the official Pulse app only offers four interval presets (20/30/60/120
 min) and no way to choose intervals like 1, 3, or 7 minutes.
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="micro-pulse app: Ready status, interval presets, custom interval stepper, and vibration pattern list" width="300">
+</p>
+
 ## Build & run
 
 Requires Xcode and a personal Apple ID (free) or paid developer account. From the
