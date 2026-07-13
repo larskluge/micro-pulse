@@ -1,0 +1,7 @@
+# Xcode / generated project
+*.xcodeproj/
+DerivedData/
+build/
+.DS_Store
+
+# xcodeproj is generated from project.yml by xcodegen; don't commit it.
