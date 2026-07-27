@@ -11,7 +11,11 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     SWIFT_VERSION: "5.0"
     TARGETED_DEVICE_FAMILY: "1"           # iPhone
-    # DEVELOPMENT_TEAM is set in Xcode (Signing & Capabilities → your Apple ID).
+    # The paid Apple Developer Program team. It belongs here and not only in
+    # Xcode's Signing & Capabilities, because this project is generated: a
+    # `xcodegen generate` would drop a team set by hand, and the build would
+    # fall back to a free personal team whose profile dies after seven days.
+    DEVELOPMENT_TEAM: GUGQ9MB76A
 
 targets:
   MicroPulse:
