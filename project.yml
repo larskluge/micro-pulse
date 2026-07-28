@@ -10,7 +10,6 @@ settings:
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
     SWIFT_VERSION: "5.0"
-    TARGETED_DEVICE_FAMILY: "1"           # iPhone
     # The paid Apple Developer Program team. It belongs here and not only in
     # Xcode's Signing & Capabilities, because this project is generated: a
     # `xcodegen generate` would drop a team set by hand, and the build would
@@ -29,11 +28,16 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.la0x.micropulse
         GENERATE_INFOPLIST_FILE: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # Belongs on the target, not in `settings.base`: xcodegen gives every
+        # iOS target a default of "1,2", which overrides the project-level
+        # value. Left universal, the iPad build demands all four interface
+        # orientations for multitasking and the portrait-only app warns.
+        TARGETED_DEVICE_FAMILY: "1"           # iPhone
     info:
       path: Info.plist
       properties:
-        CFBundleDisplayName: micro-pulse
-        NSBluetoothAlwaysUsageDescription: "micro-pulse connects to your Pulse ring to set the vibration interval and pattern."
+        CFBundleDisplayName: Micro Pulse
+        NSBluetoothAlwaysUsageDescription: "Micro Pulse connects to your Pulse ring to set the vibration interval and pattern."
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait

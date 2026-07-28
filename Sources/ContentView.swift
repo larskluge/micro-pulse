@@ -48,7 +48,7 @@ struct ContentView: View {
                 }
             }
             .disabled(!ring.isReady)
-            .navigationTitle("micro-pulse")
+            .navigationTitle("Micro Pulse")
         }
     }
 }

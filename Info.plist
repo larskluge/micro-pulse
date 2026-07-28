@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>micro-pulse</string>
+	<string>Micro Pulse</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>micro-pulse connects to your Pulse ring to set the vibration interval and pattern.</string>
+	<string>Micro Pulse connects to your Pulse ring to set the vibration interval and pattern.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>
