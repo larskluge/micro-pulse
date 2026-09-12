@@ -48,38 +48,10 @@ ring reacts immediately.
 **Keep the official Pulse app force-quit** while using this — otherwise iOS may
 reconnect the ring to it and steal the single BLE connection.
 
-## Protocol (reverse-engineered)
+## Protocol
 
-All commands are Write Requests to characteristic `E3750002-EA37-4DB0-8A7B-003F177D7BA3`
-under service `E3750001-…`; the ring replies with notifications on `E3750003-…`.
-
-**Per connection**, once, after enabling notifications — unlock handshake:
-`0550f133b792`, `028c01`, `010a`, `014e`, `0118`, `072a202e160c067e`.
-
-**Interval** (`0e8403` + A·u32le + B·u16le + flag + pad, where A+B = seconds;
-fixed interval ⇒ A=seconds, B=0), preceded by the commit prefix:
-```
-06540000005802
-09221c00000000000000
-0e8403<seconds·u32le>0000010000000000
-```
-
-**Vibration pattern** (define → commit → play):
-```
-0b880300<pattern>
-06540000000000
-0922<pattern>
-```
-
-| Pattern | 8 bytes |
-|---|---|
-| Pulse | `5e5e000000000000` |
-| Ohm | `6b5e000000000000` |
-| Soft | `6464646400000000` |
-| Prominent | `5656565656560000` |
-| Purring Cat 1 | `3737373737373737` |
-| Purring Cat 2 | `5858580000000000` |
-| Knock Knock | `010b010b010b010b` |
+See [the protocol reference](docs/PROTOCOL.md) for the Bluetooth characteristics,
+handshake, interval encoding, vibration patterns, capture findings, and known limits.
 
 ## Layout
 
